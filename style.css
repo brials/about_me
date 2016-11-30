@@ -13,6 +13,11 @@ li {
   max-width: 95%;
 }
 
+.affirmative, .negative, .nonsense{
+  float:left;
+  clear: left;
+}
+
 .affirmative {
   background-color: green;
 }
@@ -23,4 +28,17 @@ li {
 
 .nonsense {
   background-color: purple;
+}
+
+.topTenColumns {
+  float: left;
+  min-width: 30%;
+}
+
+ol{
+  text-align: center;
+}
+
+ol li {
+  text-align: center;
 }
