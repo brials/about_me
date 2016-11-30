@@ -11,6 +11,7 @@ if (response1 === 'yes' || response1 === 'y'){
   alert('I would appreciate an yes or no answer please.');
 }
 console.log('For question number 1 they answered ' + response1);
+document.write('For question 1 you answered ' + response1 + '<br>');
 
 var response2 = prompt('Do you think milk was the reason I am so tall?').toLowerCase();
 
@@ -22,6 +23,7 @@ if (response2 === 'yes' || response2 === 'y'){
   alert('Seriously you really can not figure out yes/no questions can you? ');
 }
 console.log('For question number 2 they answered ' + response2);
+document.write('For question 2 you answered ' + response2);
 
 var response3 = prompt('Are you a fan of Game of Thrones like I am?').toLowerCase();
 
@@ -33,6 +35,7 @@ if (response3 === 'yes' || response3 === 'y'){
   alert('Seriously? Tyrion would take a drink, saddened you will not answer yes or no.');
 }
 console.log('For question number 3 they answered ' + response3);
+document.write('For question 3 you answered ' + response3);
 
 var response4 = prompt('Is blue my favorite color?').toLowerCase();
 
@@ -44,6 +47,7 @@ if (response4 === 'yes' || response4 === 'y'){
   alert('Even a swallow carrying a coconut could answer yes or no.');
 }
 console.log('For question number 4 they answered ' + response4);
+document.write('For question 4 you answered ' + response4);
 
 var response5 = prompt('Is being an internationl spy my dream job?').toLowerCase();
 
@@ -55,3 +59,4 @@ if (response5 === 'yes' || response5 === 'y'){
   alert('Jaws\' metal teeth smile widely as he shows you how to say nooooooooo.');
 }
 console.log('For question number 5 they answered ' + response5);
+document.write('For question 5 you answered ' + response5);
