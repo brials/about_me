@@ -5,7 +5,7 @@ var counter = 0;
 alert('Hello, and welcome to my introduction page. We are going to play a little guessing game to begin. Please respond with yes/y or no/n answers. ')
 var reallyTallQ = prompt('Question 1: Do you think I am over 6.5 feet tall?').toLowerCase();
 
-if (reallyTallQ === 'yes' || reallyTallQ === 'y'){
+if(reallyTallQ === 'yes' || reallyTallQ === 'y'){
   alert('Yes, I am over 6.5 feet tall. Thanks for noticing');
   document.write('<p class="affirmative">For question 1 you answered ' + reallyTallQ + ' which is correct</p>');
   counter += 1;
@@ -35,7 +35,7 @@ console.log('For question number 2 they answered ' + grewAlotQ);
 
 var gameOfThronesQ = prompt('Am I a fan of Game Thrones?').toLowerCase();
 
-if (gameOfThronesQ === 'yes' || gameOfThronesQ === 'y'){
+if(gameOfThronesQ === 'yes' || gameOfThronesQ === 'y'){
   alert('Of course I am it is the best show ever.');
   document.write('<p class="affirmative">For question 3 you answered ' + gameOfThronesQ + ' which is correct</p>');
   counter += 1;
@@ -51,7 +51,7 @@ console.log('For question number 3 they answered ' + gameOfThronesQ);
 
 var montyPythonQ = prompt('Is blue my favorite color?').toLowerCase();
 
-if (montyPythonQ === 'yes' || montyPythonQ === 'y'){
+if(montyPythonQ === 'yes' || montyPythonQ === 'y'){
   alert('You may proceed across the bridge.');
   document.write('<p class="affirmative">For question 4 you answered ' + montyPythonQ + ' which is correct</p>');
   counter += 1;
@@ -66,7 +66,7 @@ console.log('For question number 4 they answered ' + montyPythonQ);
 
 var jamesBondQ = prompt('Is being an internationl spy my dream job?').toLowerCase();
 
-if (jamesBondQ === 'yes' || jamesBondQ === 'y'){
+if(jamesBondQ === 'yes' || jamesBondQ === 'y'){
   alert('You are correct. Long have I wanted to be able to go by Alspach, Brian Alspach.');
   document.write('<p class="affirmative">For question 5 you answered ' + jamesBondQ + ' which is correct</p>');
   counter += 1;
@@ -78,3 +78,39 @@ if (jamesBondQ === 'yes' || jamesBondQ === 'y'){
   document.write('<p class="nonsense">For question 5 you answered ' + jamesBondQ + ' which is nonsense</p>');
 }
 console.log('For question number 5 they answered ' + jamesBondQ);
+
+alert('This next question will be a little different. Please enter a numeral for your answer. You have 4 attempts to get ir right.')
+var howOldQ = parseInt(prompt('How old will I be in 20 years?'));
+var oldCount = 0;
+
+while(oldCount < 3){
+  if(howOldQ === 46){
+    alert('Congratulations you guessed it correctly.')
+    counter += 1;
+    break;
+  } else if(isNaN(howOldQ) === true){
+    oldCount += 1;
+    howOldQ = parseInt(prompt('Please insert a number in the prompt. Do not write out a number.'))
+  } else if(howOldQ > 46){
+    oldCount += 1;
+    howOldQ = parseInt(prompt('Sorry your guess was too high please try again :\).'))
+  } else{
+    oldCount += 1;
+    howOldQ = parseInt(prompt('Sorry your guess was too low please try again :\).'))
+  }
+}
+
+if(oldCount === 3){
+  alert('I am sorry you guessed incorrectly too many times')
+}
+
+var favAnimalsQ = prompt('For this last question please try to guess one of my favorite animals. You have 6 total guesses.');
+var myFavAnimals = ['red panda', 'goat', 'elephant', 'bear', 'dog', 'cat'];
+var animalCount = 0;
+
+for(var i =0; i<myFavAnimals.length(); i++){
+  if(animalCount === myFavAnimals[i]){
+    alert('Congratulations you guessed one correctly');
+    counter += 1;
+  }
+}
