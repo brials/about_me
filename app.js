@@ -9,7 +9,7 @@ if (response1 === 'yes' || response1 === 'y'){
 } else if(response1 === 'no' || response1 === 'n'){
   alert('Sorry, you\'re wrong. I am over 6.5 feet tall.');
   document.write('<p class="negative">For question 1 you answered ' + response1 + '</p>');
-}else {
+} else {
   alert('I would appreciate an yes or no answer please.');
   document.write('<p class="nonsense">For question 1 you answered ' + response1 + ' which is nonsense</p>');
 }
@@ -23,7 +23,7 @@ if (response2 === 'yes' || response2 === 'y'){
 } else if(response2 === 'no' || response2 === 'n'){
   alert('Yes you are correct there is no known reason why I grew so freakishly much');
   document.write('<p class="negative">For question 2 you answered ' + response2 + '</p>');
-}else {
+} else {
   alert('Seriously you really can not figure out yes/no questions can you? ');
   document.write('<p class="nonsense">For question 2 you answered ' + response2 + ' which is nonsense</p>');
 }
@@ -37,7 +37,7 @@ if (response3 === 'yes' || response3 === 'y'){
 } else if(response3 === 'no' || response3 === 'n'){
   alert('The Mother of Dragons will reign fire upon you');
   document.write('<p class="negative">For question 3 you answered ' + response3 + '</p>');
-}else {
+} else {
   alert('Seriously? Tyrion would take a drink, saddened you will not answer yes or no.');
   document.write('<p class="nonsense">For question 3 you answered ' + response3 + ' which is nonsense</p>');
 }
@@ -52,7 +52,7 @@ if (response4 === 'yes' || response4 === 'y'){
 } else if(response4 === 'no' || response4 === 'n'){
   alert('No, It\'s yellow? AGGGHHHH');
   document.write('<p class="negative">For question 4 you answered ' + response4 + '</p>');
-}else {
+} else {
   alert('Even a swallow carrying a coconut could answer yes or no.');
   document.write('<p class="nonsense">For question 4 you answered ' + response4 + ' which is nonsense</p>');
 }
@@ -65,8 +65,8 @@ if (response5 === 'yes' || response5 === 'y'){
   document.write('<p class="affirmative">For question 5 you answered ' + response5 + '</p>');
 } else if(response5 === 'no' || response5 === 'n'){
   alert('No? What do you think I want to be, a Web Developer? As if.');
-  document.write('<p class="affirmative">For question 5 you answered ' + response5 + '</p>');
-}else {
+  document.write('<p class="negative">For question 5 you answered ' + response5 + '</p>');
+} else {
   alert('Jaws\' metal teeth smile widely as he shows you how to say nooooooooo.');
   document.write('<p class="nonsense">For question 5 you answered ' + response5 + ' which is nonsense</p>');
 }
