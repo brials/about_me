@@ -10,6 +10,7 @@ if (response1 === 'yes' || response1 === 'y'){
 }else {
   alert('I would appreciate an yes or no answer please.');
 }
+console.log('For question number 1 they answered ' + response1);
 
 var response2 = prompt('Do you think milk was the reason I am so tall?').toLowerCase();
 
@@ -22,32 +23,35 @@ if (response2 === 'yes' || response2 === 'y'){
 }
 console.log('For question number 2 they answered ' + response2);
 
-var response3 = prompt('Are you a fan of Game of Thrones?').toLowerCase();
+var response3 = prompt('Are you a fan of Game of Thrones like I am?').toLowerCase();
 
 if (response3 === 'yes' || response3 === 'y'){
   alert('That is great, we will have plenty to talk about.');
 } else if(response3 === 'no' || response3 === 'n'){
   alert('The Mother of Dragons will reign fire upon you');
 }else {
-  alert('Seriously ');
+  alert('Seriously? Tyrion would take a drink, saddened you will not answer yes or no.');
 }
+console.log('For question number 3 they answered ' + response3);
 
-var response4 = prompt('Does Sam have any cats?').toLowerCase();
+var response4 = prompt('Is blue my favorite color?').toLowerCase();
 
 if (response4 === 'yes' || response4 === 'y'){
-  alert('yes, Sam does have three cats!');
+  alert('You may proceed across the bridge.');
 } else if(response4 === 'no' || response4 === 'n'){
-  alert('Sorry, you\'re wrong, Sam has three cats.');
+  alert('No, It\'s yellow? AGGGHHHH');
 }else {
-  alert('you fail to understand yes/no questions. So that is as good as wrong. You lose.');
+  alert('Even a swallow carrying a coconut could answer yes or no.');
 }
+console.log('For question number 4 they answered ' + response4);
 
-var response5 = prompt('Does Sam have any cats?').toLowerCase();
+var response5 = prompt('Is being an internationl spy my dream job?').toLowerCase();
 
 if (response5 === 'yes' || response5 === 'y'){
-  alert('yes, Sam does have three cats!');
+  alert('You are correct. Long have I wanted to be able to go by Alspach, Brian Alspach.');
 } else if(response5 === 'no' || response5 === 'n'){
-  alert('Sorry, you\'re wrong, Sam has three cats.');
+  alert('No? What do you think I want to be, a Web Developer? As if.');
 }else {
-  alert('you fail to understand yes/no questions. So that is as good as wrong. You lose.');
+  alert('Jaws\' metal teeth smile widely as he shows you how to say nooooooooo.');
 }
+console.log('For question number 5 they answered ' + response5);
