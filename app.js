@@ -13,7 +13,7 @@ if(reallyTallQ === 'yes' || reallyTallQ === 'y'){
   alert('Sorry, you\'re wrong. I am over 6.5 feet tall.');
   document.write('<p class="negative">For question 1 you answered ' + reallyTallQ + ' which is incorrect</p>');
 } else {
-  alert('I would appreciate an yes or no answer please.');
+  alert('I would appreciate a yes or no answer please.');
   document.write('<p class="nonsense">For question 1 you answered ' + reallyTallQ + ' which is nonsense</p>');
 }
 console.log('For question number 1 they answered ' + reallyTallQ);
