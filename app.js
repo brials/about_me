@@ -104,13 +104,33 @@ if(oldCount === 3){
   alert('I am sorry you guessed incorrectly too many times')
 }
 
-var favAnimalsQ = prompt('For this last question please try to guess one of my favorite animals. You have 6 total guesses.');
+var favAnimalsQ = prompt('For this last question please try to guess one of my favorite animals. You have 6 total guesses.').toLowerCase();
 var myFavAnimals = ['red panda', 'goat', 'elephant', 'bear', 'dog', 'cat'];
 var animalCount = 0;
+var animalCorrect = false;
 
-for(var i =0; i<myFavAnimals.length(); i++){
-  if(animalCount === myFavAnimals[i]){
-    alert('Congratulations you guessed one correctly');
-    counter += 1;
+while (animalCount < 5){
+  for(var i = 0; i < myFavAnimals.length; i++){
+    if(favAnimalsQ === myFavAnimals[i]){
+      alert('Congratulations you guessed one correctly');
+      counter += 1;
+      animalCorrect = true;
+      break;
+    }
   }
+  if(animalCorrect){
+    break;
+  }
+  animalCount += 1;
+  favAnimalsQ = prompt('I am sorry that is not one of my favorite animals.')
+}
+
+if(animalCount === 5){
+  alert('I am sorry you guessed incorrectly too many times')
+}
+
+if(4 < counter){
+  alert('I am sorry you only got ' + counter + ' out of 7. Better luck next time.');
+} else {
+  alert('Congratulations you got ' + counter + ' out of 7. You know me so well!')
 }
