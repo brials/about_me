@@ -3,20 +3,25 @@
 var counter = 0;
 
 alert('Hello, and welcome to my introduction page. We are going to play a little guessing game to begin. Please respond with yes/y or no/n answers. ')
-var reallyTallQ = prompt('Question 1: Do you think I am over 6.5 feet tall?').toLowerCase();
 
-if(reallyTallQ === 'yes' || reallyTallQ === 'y'){
-  alert('Yes, I am over 6.5 feet tall. Thanks for noticing');
-  document.write('<p class="affirmative">For question 1 you answered ' + reallyTallQ + ' which is correct</p>');
-  counter += 1;
-} else if(reallyTallQ === 'no' || reallyTallQ === 'n'){
-  alert('Sorry, you\'re wrong. I am over 6.5 feet tall.');
-  document.write('<p class="negative">For question 1 you answered ' + reallyTallQ + ' which is incorrect</p>');
-} else {
-  alert('I would appreciate a yes or no answer please.');
-  document.write('<p class="nonsense">For question 1 you answered ' + reallyTallQ + ' which is nonsense</p>');
-}
-console.log('For question number 1 they answered ' + reallyTallQ);
+function q1() {
+  var reallyTallQ = prompt('Question 1: Do you think I am over 6.5 feet tall?').toLowerCase();
+
+  if(reallyTallQ === 'yes' || reallyTallQ === 'y'){
+    alert('Yes, I am over 6.5 feet tall. Thanks for noticing');
+    document.write('<p class="affirmative">For question 1 you answered ' + reallyTallQ + ' which is correct</p>');
+    counter += 1;
+  } else if(reallyTallQ === 'no' || reallyTallQ === 'n'){
+    alert('Sorry, you\'re wrong. I am over 6.5 feet tall.');
+    document.write('<p class="negative">For question 1 you answered ' + reallyTallQ + ' which is incorrect</p>');
+  } else {
+    alert('I would appreciate a yes or no answer please.');
+    document.write('<p class="nonsense">For question 1 you answered ' + reallyTallQ + ' which is nonsense</p>');
+  }
+  console.log('For question number 1 they answered ' + reallyTallQ);
+  }
+q1();
+
 
 var grewAlotQ = prompt('Do you think milk was the reason I am so tall?').toLowerCase();
 
