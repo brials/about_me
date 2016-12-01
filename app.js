@@ -19,7 +19,7 @@ function q1() {
     document.write('<p class="nonsense">For question 1 you answered ' + reallyTallQ + ' which is nonsense</p>');
   }
   console.log('For question number 1 they answered ' + reallyTallQ);
-  }
+}
 q1();
 
 
