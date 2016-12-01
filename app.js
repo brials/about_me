@@ -102,7 +102,12 @@ while(oldCount < 3){
 
 if(oldCount === 3){
   alert('I am sorry you guessed incorrectly too many times')
+  console.log('The user was unable to guess the correct answer in their four tries.')
+} else {
+  console.log('The user was able to guess the correct answer in ' + oldCount + 1 + 'tries.')
 }
+
+
 
 var favAnimalsQ = prompt('For this last question please try to guess one of my favorite animals. You have 6 total guesses.').toLowerCase();
 var myFavAnimals = ['red panda', 'goat', 'elephant', 'bear', 'dog', 'cat'];
@@ -126,10 +131,12 @@ while (animalCount < 5){
 }
 
 if(animalCount === 5){
-  alert('I am sorry you guessed incorrectly too many times')
+  console.log('The user was unable to guess the correct answer in their six tries.')
+} else {
+  console.log('The user was able to guess the correct answer in ' + animalCount + 1 + 'tries.')
 }
 
-if(4 < counter){
+if(4 > counter){
   alert('I am sorry you only got ' + counter + ' out of 7. Better luck next time.');
 } else {
   alert('Congratulations you got ' + counter + ' out of 7. You know me so well!')
