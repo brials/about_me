@@ -2,7 +2,7 @@
 
 var counter = 0;
 
-alert('Hello, and welcome to my introduction page. We are going to play a little guessing game to begin. Please respond with yes/y or no/n answers. ')
+alert('Hello, and welcome to my introduction page. We are going to play a little guessing game to begin. Please respond with yes/y or no/n answers. ');
 
 function q1() {
   var reallyTallQ = prompt('Question 1: Do you think I am over 6.5 feet tall?').toLowerCase();
@@ -95,46 +95,50 @@ function q5(){
 q5();
 
 function q6(){
-  alert('This next question will be a little different. Please enter a numeral for your answer. You have 4 attempts to get ir right.')
+  alert('This next question will be a little different. Please enter a numeral for your answer. You have 4 attempts to get it right.');
   var howOldQ = parseInt(prompt('How old will I be in 20 years?'));
   var oldCount = 0;
 
   while(oldCount < 3){
     if(howOldQ === 46){
-      alert('Congratulations you guessed it correctly.')
-      counter += 1;
       break;
     } else if(isNaN(howOldQ) === true){
       oldCount += 1;
-      howOldQ = parseInt(prompt('Please insert a number in the prompt. Do not write out a number.'))
+      howOldQ = parseInt(prompt('Please insert a number in the prompt. Do not write out a number.'));
     } else if(howOldQ > 46){
       oldCount += 1;
-      howOldQ = parseInt(prompt('Sorry your guess was too high please try again :\).'))
+      howOldQ = parseInt(prompt('Sorry your guess was too high please try again :\).'));
     } else{
       oldCount += 1;
-      howOldQ = parseInt(prompt('Sorry your guess was too low please try again :\).'))
+      howOldQ = parseInt(prompt('Sorry your guess was too low please try again :\).'));
     }
   }
-  if(oldCount === 3){
-    alert('I am sorry you guessed incorrectly too many times')
-    console.log('The user was unable to guess the correct answer in their four tries.')
-  } else {
-    console.log('The user was able to guess the correct answer in ' + oldCount + 1 + 'tries.')
+  if(oldCount === 3 && howOldQ !== 46){
+    alert('I am sorry you guessed incorrectly too many times');
+    console.log('The user was unable to guess the correct answer in their four tries.');
+  } else if(howOldQ === 46){
+    alert('Congratulations you guessed it correctly.');
+    counter += 1;
+    console.log('The user was able to guess the correct answer in ' + oldCount + 1 + 'tries.');
   }
 }
+
 q6();
 
 function q7(){
-  var favAnimalsQ = prompt('For this last question please try to guess one of my favorite animals. You have 6 total guesses.').toLowerCase();
+  var favAnimalsQ;
+  alert('For this last question please try to guess one of my favorite animals. You have 6 total guesses.');
   var myFavAnimals = ['red panda', 'goat', 'elephant', 'bear', 'dog', 'cat'];
   var animalCount = 0;
   var animalCorrect = false;
 
-  while (animalCount < 5){
+  while (animalCount < 6){
+    animalCount += 1;
+    if(animalCorrect === false){
+      favAnimalsQ = prompt('Please guess one of my favorite animals.');
+    }
     for(var i = 0; i < myFavAnimals.length; i++){
       if(favAnimalsQ === myFavAnimals[i]){
-        alert('Congratulations you guessed one correctly');
-        counter += 1;
         animalCorrect = true;
         break;
       }
@@ -142,14 +146,15 @@ function q7(){
     if(animalCorrect){
       break;
     }
-    animalCount += 1;
-    favAnimalsQ = prompt('I am sorry that is not one of my favorite animals.')
   }
 
-  if(animalCount === 5){
-    console.log('The user was unable to guess the correct answer in their six tries.')
-  } else {
-    console.log('The user was able to guess the correct answer in ' + animalCount + 1 + 'tries.')
+  if(animalCount === 5 && animalCorrect === false){
+    alert('I am sorry you could not guess it correctly. My favorite animals are ' + myFavAnimals);
+    console.log('The user was unable to guess the correct answer in their six tries.');
+  } else if(animalCorrect) {
+    alert('Congratulations you guessed one correctly. All the answers were ' + myFavAnimals);
+    counter += 1;
+    console.log('The user was able to guess the correct answer in ' + animalCount + 1 + 'tries.');
   }
 }
 q7();
@@ -158,7 +163,7 @@ function finalCount(){
   if(4 > counter){
     alert('I am sorry you only got ' + counter + ' out of 7. Better luck next time.');
   } else {
-    alert('Congratulations you got ' + counter + ' out of 7. You know me so well!')
+    alert('Congratulations you got ' + counter + ' out of 7. You know me so well!');
   }
 }
 finalCount();
